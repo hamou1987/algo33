@@ -1,0 +1,37 @@
+PROCEDURE dot_Product(T1,T2: ARRAY_OF FLOAT[n], VAR vec : FLOAT)
+VAR
+    i: INTEGER := 0;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP step  DO
+         vec := vec + T1[i]*T2[i]
+    END_FOR
+       
+    END_FOR
+END
+
+ALGORITHM Vectoriels
+VAR
+    r,n :INTEGER
+    ps : FLOAT :=0;
+    v1,v2 : ARRAY_OF FLOAT[n];
+BEGIN
+    write("type the number of repeated vectors")
+    read(r)
+    Write("type the el of v1 and v2")
+
+    Write("the length of v1 and v2")
+    REad(n)
+
+    FOR i FROM 0 TO r-1 STEP   DO
+      Read(v1[i])
+      Read(v2[i])
+    END_FOR
+ dot_Product(v1,v2, ps)
+ Write(ps)
+ if(ps=0) THEN
+ Write("V1 et V2 sont orthogonaux")
+ELSE 
+ Write("v1 et v2 ne sont pas orthogonaux")
+ END_IF
+
+END
